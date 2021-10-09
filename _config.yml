@@ -1,0 +1,18 @@
+# basic options
+title: Dit is een test
+author: Kees
+description: Testsite voor het toevoegen van een vorige en voorgaande pagina onderaan een post.
+
+# URL to GitHub repo
+baseurl: "/test-prev-next-page"
+url: "https://prudento-nl.github.io"
+
+# URL to images folder at GitHub repo LET OP het format van de link met de PUNT!
+images: "https://prudento-nl.github.io/2021-06-friesland/images"
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+minima:
+  date_format: "%d-%m-%Y"
