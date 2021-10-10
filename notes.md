@@ -18,6 +18,9 @@ N.B. Framework writings maakt ***geen*** gebruik van een gem.
 
 Na het toevoegen van de code in post.html zijn de linken zichtbaar en werken.
 Opmaak is niet netjes en het pijltje dat zichtbaar is bij Framework writings is niet aanwezig omdat de icon buttons nog niet werken.
+## *TODO: Werkend maken pijltjes (of andere oplossing)*
+- *Aan de linken naar de vorige/volgende pagina is een > teken toegevoegd in de originele blog.*
+- *Dit wordt gedaan m.b.v. _Font Based Icons_ in dit geval &#xE001.*
 
 ### Toegevoegd aan post.html (voor `</article>`):  
 ```
@@ -44,34 +47,37 @@ Opmaak is niet netjes en het pijltje dat zichtbaar is bij Framework writings is 
 
 ## CSS toevoegen  
 Voor de opmaak moet CSS toegevoegd worden.
-Kopieer de CSS uit Framework writings style.scss (zie hieronder voor het deel dat je nodig hebt).  
-- Waar kunnen we dit deel van de css het beste plaatsen?
-  - de volledige folder _sass uit de gem gekopieerd
-  - code toegevoegd aan _sass/minima.scss (snippet hieronder) **GAF EEN ERROR: WEER VERWIJDERD VOOR EEN SCHONE LEI.**
-  - Errors oplossen
-    - 
-Zet in ????????
+Kopieer de CSS uit Framework writings style.scss (deel van .pagination).  
+ - code toegevoegd aan _sass/minima.scss (snippet hieronder)
+  - Errors oplossen:
+    - Error over mobile: uitgevinkt
+    - Error over kleuren pagination: bestaande kleuren uit minima.scss gebruikt
+
+## *TODO: Waar kunnen we dit deel van de css het beste plaatsen?*
+## *TODO: Error Mobile*
 
 ### Code toegevoegd aan _sass/minima.scss  
 ```
-// Previous/next page START
+/// Previous/next page START
+
 .pagination {
   font-weight: 300;
   padding: 2em 0;
   width: 100%;
   display: inline-block;
 
-  @include mobile {
-    font-size: $small-font-size;
-  }
+  // UITGEVINKT: GAF EEN ERROR
+  // @include mobile {
+  //   font-size: $small-font-size;
+  // }
 
   > .prev {
     float: left;
     width: 50%;
     a {
-      color: $pagination-color;
+      color: $grey-color;
       &:hover, &:focus {
-        color: $pagination-over-color;
+        color: $grey-color-dark;
       }
     }
   }
@@ -81,14 +87,16 @@ Zet in ????????
     text-align: right;
     width: 50%;
     a {
-      color: $pagination-color;
+      color: $grey-color;
       &:hover, &:focus {
-        color: $pagination-over-color;
+        color: $grey-color-dark;
       }
     }
   }
 }
+
 // Previous/next page END
+
 ```
 
 

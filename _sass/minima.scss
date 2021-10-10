@@ -43,6 +43,45 @@ $on-laptop:        800px !default;
   font-size: $base-font-size * $ratio;
 }
 
+// Previous/next page START
+
+.pagination {
+  font-weight: 300;
+  padding: 2em 0;
+  width: 100%;
+  display: inline-block;
+
+  // UITGEVINKT: GAF EEN ERROR
+  // @include mobile {
+  //   font-size: $small-font-size;
+  // }
+
+  > .prev {
+    float: left;
+    width: 50%;
+    a {
+      color: $grey-color;
+      &:hover, &:focus {
+        color: $grey-color-dark;
+      }
+    }
+  }
+
+  > .next {
+    float: right;
+    text-align: right;
+    width: 50%;
+    a {
+      color: $grey-color;
+      &:hover, &:focus {
+        color: $grey-color-dark;
+      }
+    }
+  }
+}
+
+// Previous/next page END
+
 // Import partials.
 @import
   "minima/base",
