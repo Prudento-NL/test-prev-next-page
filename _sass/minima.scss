@@ -51,11 +51,6 @@ $on-laptop:        800px !default;
   width: 100%;
   display: inline-block;
 
-  // UITGEVINKT: GAF EEN ERROR
-  // @include mobile {
-  //   font-size: $small-font-size;
-  // }
-
   > .prev {
     float: left;
     width: 50%;
@@ -79,6 +74,7 @@ $on-laptop:        800px !default;
     }
   }
 }
+
 
 // Previous/next page END
 

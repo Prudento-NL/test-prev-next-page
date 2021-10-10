@@ -6,6 +6,10 @@
 - Getest en werkt. Push naar GitHub.
 - Framework writings heeft de mogelijkheid in zich om de vorige/volgende pagina te kiezen. Dit wordt de bron voor de wijzigingen.
 
+## *TODO: Wijzigingen toevoegen aan*
+- *de template*
+- *alle blogs*
+
 ## Info
 [W3Schools: Icons Tutorial](https://www.w3schools.com/icons/default.asp)  
 [W3Schools: How TO - Next and Previous Buttons](https://www.w3schools.com/howto/howto_css_next_prev.asp)  
@@ -50,11 +54,10 @@ Voor de opmaak moet CSS toegevoegd worden.
 Kopieer de CSS uit Framework writings style.scss (deel van .pagination).  
  - code toegevoegd aan _sass/minima.scss (snippet hieronder)
   - Errors oplossen:
-    - Error over mobile: uitgevinkt
+    - Error over mobile: verwijderd uit de code: heeft te maken met responsive website. 
     - Error over kleuren pagination: bestaande kleuren uit minima.scss gebruikt
 
 ## *TODO: Waar kunnen we dit deel van de css het beste plaatsen?*
-## *TODO: Error Mobile*
 
 ### Code toegevoegd aan _sass/minima.scss  
 ```
@@ -65,11 +68,6 @@ Kopieer de CSS uit Framework writings style.scss (deel van .pagination).
   padding: 2em 0;
   width: 100%;
   display: inline-block;
-
-  // UITGEVINKT: GAF EEN ERROR
-  // @include mobile {
-  //   font-size: $small-font-size;
-  // }
 
   > .prev {
     float: left;
