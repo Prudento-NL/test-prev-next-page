@@ -29,7 +29,6 @@ Opmaak is niet netjes en het pijltje dat zichtbaar is bij Framework writings is 
 ### Toegevoegd aan post.html (voor `</article>`):  
 ```
   <!-- Previous/next page START -->
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
   <div class="pagination">
     {% if page.previous.url %}
     <span class="prev">
@@ -54,7 +53,9 @@ Voor de opmaak moet CSS toegevoegd worden.
 Kopieer de CSS uit Framework writings style.scss (deel van .pagination).  
  - code toegevoegd aan _sass/minima.scss (snippet hieronder)
   - Errors oplossen:
-    - Error over mobile: verwijderd uit de code: heeft te maken met responsive website. 
+    - Error over mobile: verwijderd uit de code:
+      - heeft te maken met responsive website.
+      - binnen minima.scss wordt hiervoor gebruikt: `@mixin media-query`  
     - Error over kleuren pagination: bestaande kleuren uit minima.scss gebruikt
 
 ## *TODO: Waar kunnen we dit deel van de css het beste plaatsen?*

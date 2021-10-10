@@ -25,9 +25,10 @@ layout: default
   {%- include disqus_comments.html -%}
   {%- endif -%}
 
-  <!-- Previous/next page START -->
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-  <div class="pagination">
+   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+ 
+   <!-- Previous/next page START -->
+   <div class="pagination">
     {% if page.previous.url %}
     <span class="prev">
       <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}">
