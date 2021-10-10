@@ -10,10 +10,10 @@
 - *de template*
 - *alle blogs*
 
-## Info
-[W3Schools: Icons Tutorial](https://www.w3schools.com/icons/default.asp)  
-[W3Schools: How TO - Next and Previous Buttons](https://www.w3schools.com/howto/howto_css_next_prev.asp)  
-[W3Schools: How TO - Icon Buttons](https://www.w3schools.com/howto/howto_css_icon_buttons.asp)  
+## Gewijzigde bestanden
+Onderstaande bestanden maken deel uit van de gem. Aangepaste bestanden in deze repo kunnen gebruikt worden om de bestaande template en blogs aan te passen. 
+- _layouts/post.html
+- _sass/minima.scss
 
 ## Snippet toevoegen aan de layout post
 De layout die gebruik wordt voor de posts is _layout/post.html.
@@ -22,9 +22,9 @@ N.B. Framework writings maakt ***geen*** gebruik van een gem.
 
 Na het toevoegen van de code in post.html zijn de linken zichtbaar en werken.
 Opmaak is niet netjes en het pijltje dat zichtbaar is bij Framework writings is niet aanwezig omdat de icon buttons nog niet werken.
-## *TODO: Werkend maken pijltjes (of andere oplossing)*
 - *Aan de linken naar de vorige/volgende pagina is een > teken toegevoegd in de originele blog.*
 - *Dit wordt gedaan m.b.v. _Font Based Icons_ in dit geval &#xE001.*
+- Voorlopig een quick and dirty oplossing gebruikt door '<<' en '>>' te gebruiken.
 
 ### Toegevoegd aan post.html (voor `</article>`):  
 ```
@@ -33,14 +33,14 @@ Opmaak is niet netjes en het pijltje dat zichtbaar is bij Framework writings is 
     {% if page.previous.url %}
     <span class="prev">
       <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}">
-        &#xE000; {{ page.previous.title }}
+        <<>> {{ page.previous.title }}
       </a>
     </span>
     {% endif %}
     {% if page.next.url %}
     <span class="next">
       <a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}">
-        {{ page.next.title }} &#xE001;
+        {{ page.next.title }} >>
       </a>
     </span>
     {% endif %}
@@ -58,13 +58,13 @@ Kopieer de CSS uit Framework writings style.scss (deel van .pagination).
       - binnen minima.scss wordt hiervoor gebruikt: `@mixin media-query`  
     - Error over kleuren pagination: bestaande kleuren uit minima.scss gebruikt
 
-## *TODO: Waar kunnen we dit deel van de css het beste plaatsen?*
 
 ### Code toegevoegd aan _sass/minima.scss  
 ```
 /// Previous/next page START
 
 .pagination {
+  font-size: large;
   font-weight: 300;
   padding: 2em 0;
   width: 100%;
